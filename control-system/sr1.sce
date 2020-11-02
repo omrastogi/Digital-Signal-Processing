@@ -1,0 +1,15 @@
+clc;
+clf;
+clear all;
+s=poly(0,"s");
+num1=(s^2+4*s+4);
+den1=(s^2+10*s+25);
+s1=syslin('c',num1,den1);
+[z,p,k]=tf2zp(s1);
+disp(z);
+disp(p);
+disp(k);
+s4=zp2tf(z,p,k,"c");
+disp(s4);
+s5=tf2ss(s4);
+disp(s5);

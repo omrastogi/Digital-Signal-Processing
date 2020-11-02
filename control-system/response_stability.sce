@@ -1,0 +1,16 @@
+clc;
+clf;
+clear all;
+t=0:0.01:5;
+s1=exp(-t);
+s2=exp(t);
+subplot(2,1,1);
+plot(s1);
+xlabel("time");
+ylabel("amplitude");
+title("plot by Om");
+subplot(2,1,2);
+plot(s2);
+xlabel("time");
+ylabel("amplitude");
+title("plot by Om");

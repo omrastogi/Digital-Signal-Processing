@@ -1,0 +1,20 @@
+clc;
+clf;
+clear all;
+s=poly(0,"s");
+num1=1;
+den1=2*s;
+s1=syslin('c',num1,den1);
+s2=5;
+s3=s1/.s2;
+s4=300;
+s5=s3*s4;
+s6=.2;
+s7=s5/.s6;
+disp(s7);
+t=0:0.001:5;
+s8=csim('step',t,s7);
+plot(t,s8);
+xlabel("time");
+ylabel("amplitude");
+title("response  plot by om")
